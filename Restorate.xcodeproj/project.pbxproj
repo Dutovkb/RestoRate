@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B29F4F425CDB16E007F4688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B29F4F325CDB16E007F4688 /* Assets.xcassets */; };
+		0B29F4F725CDB8E2007F4688 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29F4F625CDB8E2007F4688 /* TableViewCell.swift */; };
 		0B6C86CA25CD5EC900B02136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C86C925CD5EC900B02136 /* AppDelegate.swift */; };
 		0B6C86CC25CD5EC900B02136 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C86CB25CD5EC900B02136 /* SceneDelegate.swift */; };
 		0B6C86D125CD5EC900B02136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6C86CF25CD5EC900B02136 /* Main.storyboard */; };
@@ -17,7 +18,8 @@
 
 /* Begin PBXFileReference section */
 		0B29F4F325CDB16E007F4688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0B6C86C625CD5EC900B02136 /* Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B29F4F625CDB8E2007F4688 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		0B6C86C625CD5EC900B02136 /* Restorate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restorate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B6C86C925CD5EC900B02136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B6C86CB25CD5EC900B02136 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0B6C86D025CD5EC900B02136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,7 +42,7 @@
 		0B6C86BD25CD5EC900B02136 = {
 			isa = PBXGroup;
 			children = (
-				0B6C86C825CD5EC900B02136 /* Planner */,
+				0B6C86C825CD5EC900B02136 /* Restorate */,
 				0B6C86C725CD5EC900B02136 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +50,32 @@
 		0B6C86C725CD5EC900B02136 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B6C86C625CD5EC900B02136 /* Planner.app */,
+				0B6C86C625CD5EC900B02136 /* Restorate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0B6C86C825CD5EC900B02136 /* Planner */ = {
+		0B6C86C825CD5EC900B02136 /* Restorate */ = {
 			isa = PBXGroup;
 			children = (
 				0B6C86C925CD5EC900B02136 /* AppDelegate.swift */,
 				0B6C86CB25CD5EC900B02136 /* SceneDelegate.swift */,
 				0B6C86DF25CD5F3F00B02136 /* TableViewController.swift */,
+				0B29F4F625CDB8E2007F4688 /* TableViewCell.swift */,
 				0B6C86CF25CD5EC900B02136 /* Main.storyboard */,
 				0B6C86D425CD5ECB00B02136 /* LaunchScreen.storyboard */,
 				0B29F4F325CDB16E007F4688 /* Assets.xcassets */,
 				0B6C86D725CD5ECB00B02136 /* Info.plist */,
 			);
-			path = Planner;
+			path = Restorate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0B6C86C525CD5EC900B02136 /* Planner */ = {
+		0B6C86C525CD5EC900B02136 /* Restorate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B6C86DA25CD5ECB00B02136 /* Build configuration list for PBXNativeTarget "Planner" */;
+			buildConfigurationList = 0B6C86DA25CD5ECB00B02136 /* Build configuration list for PBXNativeTarget "Restorate" */;
 			buildPhases = (
 				0B6C86C225CD5EC900B02136 /* Sources */,
 				0B6C86C325CD5EC900B02136 /* Frameworks */,
@@ -82,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = Planner;
+			name = Restorate;
 			productName = Planner;
-			productReference = 0B6C86C625CD5EC900B02136 /* Planner.app */;
+			productReference = 0B6C86C625CD5EC900B02136 /* Restorate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +104,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0B6C86C125CD5EC900B02136 /* Build configuration list for PBXProject "Planner" */;
+			buildConfigurationList = 0B6C86C125CD5EC900B02136 /* Build configuration list for PBXProject "Restorate" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0B6C86C525CD5EC900B02136 /* Planner */,
+				0B6C86C525CD5EC900B02136 /* Restorate */,
 			);
 		};
 /* End PBXProject section */
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B6C86CA25CD5EC900B02136 /* AppDelegate.swift in Sources */,
+				0B29F4F725CDB8E2007F4688 /* TableViewCell.swift in Sources */,
 				0B6C86E025CD5F3F00B02136 /* TableViewController.swift in Sources */,
 				0B6C86CC25CD5EC900B02136 /* SceneDelegate.swift in Sources */,
 			);
@@ -288,7 +292,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8S9K4737H3;
-				INFOPLIST_FILE = Planner/Info.plist;
+				INFOPLIST_FILE = restorate/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +311,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8S9K4737H3;
-				INFOPLIST_FILE = Planner/Info.plist;
+				INFOPLIST_FILE = restorate/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,7 +326,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0B6C86C125CD5EC900B02136 /* Build configuration list for PBXProject "Planner" */ = {
+		0B6C86C125CD5EC900B02136 /* Build configuration list for PBXProject "Restorate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B6C86D825CD5ECB00B02136 /* Debug */,
@@ -331,7 +335,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0B6C86DA25CD5ECB00B02136 /* Build configuration list for PBXNativeTarget "Planner" */ = {
+		0B6C86DA25CD5ECB00B02136 /* Build configuration list for PBXNativeTarget "Restorate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B6C86DB25CD5ECB00B02136 /* Debug */,
