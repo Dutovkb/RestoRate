@@ -10,19 +10,66 @@
         <!--Restorate-->
         <scene sceneID="iC7-05-qRz">
             <objects>
-                <tableViewController id="lTz-wg-t31" customClass="TableViewController" customModule="Planner" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="lTz-wg-t31" customClass="TableViewController" customModule="Restorate" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RVS-1w-9EF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="exD-Jg-9kM">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="85" id="exD-Jg-9kM" customClass="TableViewCell" customModule="Restorate" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="exD-Jg-9kM" id="cLL-jH-eKp">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PhR-m8-RYE">
+                                            <rect key="frame" x="20" y="7" width="75" height="70"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="70" id="KhD-Wc-Vxx"/>
+                                                <constraint firstAttribute="width" constant="75" id="maK-cJ-adh"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="98h-TQ-Sdl">
+                                            <rect key="frame" x="103" y="6" width="295" height="70.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tD5-6w-CK3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="295" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Vf-Ko-SQE">
+                                                    <rect key="frame" x="0.0" y="28.5" width="295" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKG-Jq-CoI">
+                                                    <rect key="frame" x="0.0" y="54.5" width="295" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="PhR-m8-RYE" firstAttribute="top" secondItem="cLL-jH-eKp" secondAttribute="top" constant="7" id="1KD-oF-7V5"/>
+                                        <constraint firstAttribute="bottom" secondItem="98h-TQ-Sdl" secondAttribute="bottom" constant="8.5" id="3hV-5r-hoD"/>
+                                        <constraint firstItem="98h-TQ-Sdl" firstAttribute="top" secondItem="cLL-jH-eKp" secondAttribute="top" constant="6" id="4Lr-vz-0Cc"/>
+                                        <constraint firstAttribute="bottom" secondItem="PhR-m8-RYE" secondAttribute="bottom" constant="8" id="9ZD-Nc-tqC"/>
+                                        <constraint firstItem="PhR-m8-RYE" firstAttribute="leading" secondItem="cLL-jH-eKp" secondAttribute="leading" constant="20" symbolic="YES" id="JNZ-JH-f3Y"/>
+                                        <constraint firstAttribute="trailing" secondItem="98h-TQ-Sdl" secondAttribute="trailing" constant="16" id="YMc-QF-Q1e"/>
+                                        <constraint firstItem="98h-TQ-Sdl" firstAttribute="leading" secondItem="PhR-m8-RYE" secondAttribute="trailing" constant="8" symbolic="YES" id="tUc-rd-vCG"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="locationLabel" destination="5Vf-Ko-SQE" id="Nlw-DC-FGi"/>
+                                    <outlet property="nameLabel" destination="tD5-6w-CK3" id="ZXe-B5-Bwr"/>
+                                    <outlet property="placeImage" destination="PhR-m8-RYE" id="HAu-nW-xlA"/>
+                                    <outlet property="typeLabel" destination="qKG-Jq-CoI" id="alw-Io-LRv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
