@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main ViewController-->
+        <!--Restorate-->
         <scene sceneID="iC7-05-qRz">
             <objects>
                 <tableViewController id="lTz-wg-t31" customClass="TableViewController" customModule="Planner" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="lTz-wg-t31" id="GzB-iy-8tt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Main ViewController" id="y2x-Mz-j3c"/>
+                    <navigationItem key="navigationItem" title="Restorate" id="y2x-Mz-j3c"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUX-hE-5gL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
