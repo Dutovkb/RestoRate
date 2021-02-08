@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,9 +16,12 @@
 		0B6C86D125CD5EC900B02136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6C86CF25CD5EC900B02136 /* Main.storyboard */; };
 		0B6C86D625CD5ECB00B02136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6C86D425CD5ECB00B02136 /* LaunchScreen.storyboard */; };
 		0B6C86E025CD5F3F00B02136 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C86DF25CD5F3F00B02136 /* TableViewController.swift */; };
+		0BADFE5D25D17171006D3BE2 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BADFE5C25D17171006D3BE2 /* StorageManager.swift */; };
+		F259D8CAEC9D964875F2543A /* Pods_Restorate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88AD724F09A3EF3D813802BC /* Pods_Restorate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0662014E288B7FD7341EF602 /* Pods-Restorate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restorate.release.xcconfig"; path = "Target Support Files/Pods-Restorate/Pods-Restorate.release.xcconfig"; sourceTree = "<group>"; };
 		0B29F4F325CDB16E007F4688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B29F4F625CDB8E2007F4688 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		0B29F50025CDBDFE007F4688 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		0B6C86D525CD5ECB00B02136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B6C86D725CD5ECB00B02136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B6C86DF25CD5F3F00B02136 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		0BADFE5C25D17171006D3BE2 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		88AD724F09A3EF3D813802BC /* Pods_Restorate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restorate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B51E694B147E701EA0933CDE /* Pods-Restorate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restorate.debug.xcconfig"; path = "Target Support Files/Pods-Restorate/Pods-Restorate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F259D8CAEC9D964875F2543A /* Pods_Restorate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +55,8 @@
 			children = (
 				0B6C86C825CD5EC900B02136 /* Restorate */,
 				0B6C86C725CD5EC900B02136 /* Products */,
+				BE396A5BC49006AC917FDDBF /* Pods */,
+				2F1A851BE62F601ABBCD49B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +76,7 @@
 				0B6C86DF25CD5F3F00B02136 /* TableViewController.swift */,
 				0B29F50325D13416007F4688 /* NewPlaceTableViewController.swift */,
 				0B29F50025CDBDFE007F4688 /* PlaceModel.swift */,
+				0BADFE5C25D17171006D3BE2 /* StorageManager.swift */,
 				0B29F4F625CDB8E2007F4688 /* TableViewCell.swift */,
 				0B6C86CF25CD5EC900B02136 /* Main.storyboard */,
 				0B6C86D425CD5ECB00B02136 /* LaunchScreen.storyboard */,
@@ -76,6 +86,23 @@
 			path = Restorate;
 			sourceTree = "<group>";
 		};
+		2F1A851BE62F601ABBCD49B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88AD724F09A3EF3D813802BC /* Pods_Restorate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE396A5BC49006AC917FDDBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B51E694B147E701EA0933CDE /* Pods-Restorate.debug.xcconfig */,
+				0662014E288B7FD7341EF602 /* Pods-Restorate.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B6C86DA25CD5ECB00B02136 /* Build configuration list for PBXNativeTarget "Restorate" */;
 			buildPhases = (
+				6C9A3A9AE8970336056CFB4E /* [CP] Check Pods Manifest.lock */,
 				0B6C86C225CD5EC900B02136 /* Sources */,
 				0B6C86C325CD5EC900B02136 /* Frameworks */,
 				0B6C86C425CD5EC900B02136 /* Resources */,
+				613C900884DDC4DB954E5AAA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +170,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		613C900884DDC4DB954E5AAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Restorate/Pods-Restorate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Restorate/Pods-Restorate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Restorate/Pods-Restorate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C9A3A9AE8970336056CFB4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Restorate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0B6C86C225CD5EC900B02136 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -149,6 +220,7 @@
 				0B29F50425D13416007F4688 /* NewPlaceTableViewController.swift in Sources */,
 				0B6C86CA25CD5EC900B02136 /* AppDelegate.swift in Sources */,
 				0B29F4F725CDB8E2007F4688 /* TableViewCell.swift in Sources */,
+				0BADFE5D25D17171006D3BE2 /* StorageManager.swift in Sources */,
 				0B29F50125CDBDFE007F4688 /* PlaceModel.swift in Sources */,
 				0B6C86E025CD5F3F00B02136 /* TableViewController.swift in Sources */,
 				0B6C86CC25CD5EC900B02136 /* SceneDelegate.swift in Sources */,
@@ -295,6 +367,7 @@
 		};
 		0B6C86DB25CD5ECB00B02136 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B51E694B147E701EA0933CDE /* Pods-Restorate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +387,7 @@
 		};
 		0B6C86DC25CD5ECB00B02136 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0662014E288B7FD7341EF602 /* Pods-Restorate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
