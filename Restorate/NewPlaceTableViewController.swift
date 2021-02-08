@@ -9,10 +9,20 @@ import UIKit
 
 class NewPlaceTableViewController: UITableViewController, UINavigationControllerDelegate {
     
+    var newPlace: Place?
+    var imageIsChanged = false
+    
     @IBOutlet weak var imageOfPlace: UIImageView!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var placeName: UITextField!
+    @IBOutlet weak var placeLocation: UITextField!
+    @IBOutlet weak var placeType: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        saveButton.isEnabled = false
+        placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         
         // Removing unnecessary separators in the table
         tableView.tableFooterView = UIView()
@@ -24,22 +34,31 @@ class NewPlaceTableViewController: UITableViewController, UINavigationController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
+            
+            // Adding icons to UIAlertAction
+            
+            let cameraIcon = #imageLiteral(resourceName: "camera")
+            let photoIcon = #imageLiteral(resourceName: "photo")
+            
+            // Add and configure UIAlertController
+            
             let actionSheet = UIAlertController(title: nil,
                                                 message: nil,
                                                 preferredStyle: .actionSheet)
             
-            let camera = UIAlertAction(title: "Камера",
-                                       style: .default) { _ in
+            let camera = UIAlertAction(title: "Камера", style: .default) { _ in
                 self.chooseImagePicker(source: .camera)
             }
+            camera.setValue(cameraIcon, forKey: "image")
+            camera.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
             
-            let photo = UIAlertAction(title: "Фото",
-                                      style: .default) { _ in
+            let photo = UIAlertAction(title: "Фото", style: .default) { _ in
                 self.chooseImagePicker(source: .photoLibrary)
             }
+            photo.setValue(photoIcon, forKey: "image")
+            photo.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
             
-            let cancel = UIAlertAction(title: "Отмена",
-                                       style: .cancel)
+            let cancel = UIAlertAction(title: "Отмена", style: .cancel)
             
             actionSheet.addAction(camera)
             actionSheet.addAction(photo)
@@ -50,6 +69,28 @@ class NewPlaceTableViewController: UITableViewController, UINavigationController
         } else {
             view.endEditing(true)
         }
+    }
+    
+    // Implement the possibility of saving a new establishment
+    
+    func saveNewPlace() {
+        
+        var image: UIImage?
+        
+        if imageIsChanged {
+            image = imageOfPlace.image
+        } else {
+            image = #imageLiteral(resourceName: "imagePlaceholder")
+        }
+        
+        newPlace = Place(name: placeName.text!,
+                         location: placeLocation.text,
+                         type: placeType.text,
+                         image: image,
+                         restarauntImage: nil)
+    }
+    @IBAction func cancelAction(_ sender: Any) {
+        dismiss(animated: true)
     }
 }
 //MARK: - TextField delegate
@@ -62,6 +103,18 @@ extension NewPlaceTableViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
+    // Configuring the logic for hiding the save button
+    
+    @objc private func textFieldChanged() {
+        if placeName.text?.isEmpty != true {
+            saveButton.isEnabled = true
+        } else {
+            saveButton.isEnabled = false
+        }
+    }
+    
+    
 }
 
 //MARK: - Work with image
@@ -72,7 +125,7 @@ extension NewPlaceTableViewController: UIImagePickerControllerDelegate {
         
         if UIImagePickerController.isSourceTypeAvailable(source) {
             let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self 
+            imagePicker.delegate = self
             imagePicker.allowsEditing = true
             imagePicker.sourceType = source
             present(imagePicker, animated: true)
@@ -83,6 +136,9 @@ extension NewPlaceTableViewController: UIImagePickerControllerDelegate {
         imageOfPlace.image = info[.editedImage] as? UIImage
         imageOfPlace.contentMode = .scaleAspectFill
         imageOfPlace.clipsToBounds = true
+        
+        imageIsChanged = true
+        
         dismiss(animated: true, completion: nil)
     }
 }
