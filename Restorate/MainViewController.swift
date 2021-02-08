@@ -8,9 +8,10 @@
 import UIKit
 import RealmSwift
 
-class TableViewController: UITableViewController {
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var places: Results<Place>!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,7 @@ class TableViewController: UITableViewController {
     
     // MARK: - TableView delegate
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
             let place = places[indexPath.row]
@@ -31,11 +32,11 @@ class TableViewController: UITableViewController {
     
     // MARK: - TableView data source
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return places.isEmpty ? 0 : places.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         
         let place = places[indexPath.row]
