@@ -75,6 +75,7 @@
                                     <outlet property="nameLabel" destination="tD5-6w-CK3" id="ZXe-B5-Bwr"/>
                                     <outlet property="placeImage" destination="PhR-m8-RYE" id="HAu-nW-xlA"/>
                                     <outlet property="typeLabel" destination="qKG-Jq-CoI" id="alw-Io-LRv"/>
+                                    <segue destination="aJj-1r-lpg" kind="show" identifier="showDetail" id="CUl-TA-IPg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -83,7 +84,7 @@
                             <outlet property="delegate" destination="lTz-wg-t31" id="GzB-iy-8tt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Restorate" id="y2x-Mz-j3c">
+                    <navigationItem key="navigationItem" title="Restorate" largeTitleDisplayMode="never" id="y2x-Mz-j3c">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xkg-tg-qmN">
                             <connections>
                                 <segue destination="teY-7C-tDr" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="zVO-fa-MCw"/>
@@ -100,8 +101,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RWq-BW-bb2" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HLY-7t-3db">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="HLY-7t-3db">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -190,14 +191,14 @@
                                                     <rect key="frame" x="16" y="8" width="382" height="63"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsV-A6-WJ8">
-                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="28.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="28"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Введите адрес заведения" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dLV-Kn-0QV">
-                                                            <rect key="frame" x="0.0" y="36.5" width="382" height="26.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <rect key="frame" x="0.0" y="36" width="382" height="27"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                             <connections>
                                                                 <outlet property="delegate" destination="aJj-1r-lpg" id="Psx-Sp-ZJl"/>
@@ -225,14 +226,14 @@
                                                     <rect key="frame" x="16" y="8" width="382" height="63"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Тип заведения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0i-iO-yHI">
-                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="28.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="28"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Введите тип заведения" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yZj-a5-DI2" customClass="N">
-                                                            <rect key="frame" x="0.0" y="36.5" width="382" height="26.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <rect key="frame" x="0.0" y="36" width="382" height="27"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                             <connections>
                                                                 <outlet property="delegate" destination="aJj-1r-lpg" id="Icq-Wr-7wc"/>
@@ -257,7 +258,7 @@
                             <outlet property="delegate" destination="aJj-1r-lpg" id="spK-Xv-RY2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New place" id="Uy0-hG-maz">
+                    <navigationItem key="navigationItem" title="New place" largeTitleDisplayMode="always" id="Uy0-hG-maz">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sT8-Pt-aAR">
                             <connections>
                                 <action selector="cancelAction:" destination="aJj-1r-lpg" id="dfs-mJ-veV"/>
@@ -287,9 +288,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="teY-7C-tDr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="V3S-cs-QJA"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zcS-Zn-bQE">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="V3S-cs-QJA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="zcS-Zn-bQE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -302,6 +303,9 @@
             <point key="canvasLocation" x="1756.521739130435" y="34.821428571428569"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yp1-ES-moC"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="maxresdefault" width="640" height="360"/>
         <systemColor name="systemBackgroundColor">
