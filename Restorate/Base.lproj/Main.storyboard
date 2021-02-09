@@ -92,9 +92,12 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oSj-dx-MTi">
                                 <rect key="frame" x="0.0" y="88" width="414" height="32"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Date"/>
+                                    <segment title="Name"/>
                                 </segments>
+                                <connections>
+                                    <action selector="sortSelection:" destination="iFs-KO-Raw" eventType="valueChanged" id="LYh-Ti-nEY"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zIu-n7-rEE"/>
@@ -107,7 +110,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Restorate" largeTitleDisplayMode="never" id="CDe-tW-r6E">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="rZ4-NV-Lat"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="rZ4-NV-Lat">
+                            <connections>
+                                <action selector="reversedSorting:" destination="iFs-KO-Raw" id="RoC-0d-diS"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="92c-mK-YwT">
                             <connections>
                                 <segue destination="teY-7C-tDr" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="zyq-jb-0we"/>
@@ -115,6 +122,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="reversedSortingButton" destination="rZ4-NV-Lat" id="wip-fQ-P1W"/>
+                        <outlet property="segmentedControl" destination="oSj-dx-MTi" id="ofQ-uo-nWa"/>
                         <outlet property="tableView" destination="rkJ-Zn-kry" id="c1P-O2-4oh"/>
                     </connections>
                 </viewController>
