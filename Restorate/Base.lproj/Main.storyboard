@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rkJ-Zn-kry">
-                                <rect key="frame" x="0.0" y="120" width="414" height="776"/>
+                                <rect key="frame" x="0.0" y="126" width="414" height="769"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -90,7 +90,7 @@
                                 </connections>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oSj-dx-MTi">
-                                <rect key="frame" x="0.0" y="88" width="414" height="32"/>
+                                <rect key="frame" x="0.0" y="86" width="414" height="39"/>
                                 <segments>
                                     <segment title="Date"/>
                                     <segment title="Name"/>
@@ -103,10 +103,10 @@
                         <viewLayoutGuide key="safeArea" id="zIu-n7-rEE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rkJ-Zn-kry" firstAttribute="top" secondItem="oSj-dx-MTi" secondAttribute="bottom" constant="1" id="WRR-xY-7kl"/>
-                            <constraint firstItem="oSj-dx-MTi" firstAttribute="top" secondItem="zIu-n7-rEE" secondAttribute="top" id="s5F-LK-hfk"/>
-                            <constraint firstItem="oSj-dx-MTi" firstAttribute="leading" secondItem="zIu-n7-rEE" secondAttribute="leading" id="z7J-lX-mQX"/>
-                            <constraint firstItem="zIu-n7-rEE" firstAttribute="trailing" secondItem="oSj-dx-MTi" secondAttribute="trailing" id="zij-qE-Svx"/>
+                            <constraint firstItem="oSj-dx-MTi" firstAttribute="leading" secondItem="rkJ-Zn-kry" secondAttribute="leading" id="5ws-aj-jQq"/>
+                            <constraint firstItem="oSj-dx-MTi" firstAttribute="trailing" secondItem="rkJ-Zn-kry" secondAttribute="trailing" id="Ehu-mT-kpv"/>
+                            <constraint firstItem="rkJ-Zn-kry" firstAttribute="top" secondItem="oSj-dx-MTi" secondAttribute="bottom" constant="2" id="YRU-dV-wrp"/>
+                            <constraint firstItem="oSj-dx-MTi" firstAttribute="top" secondItem="NGs-tO-xjE" secondAttribute="topMargin" constant="-2" id="lfP-Gq-AWR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Restorate" largeTitleDisplayMode="never" id="CDe-tW-r6E">
