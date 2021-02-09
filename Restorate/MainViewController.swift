@@ -55,7 +55,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK: - TableView data source
     
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if isFiltering {
             return filteredPlaces.count
@@ -96,9 +96,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
             let newPlaceVC = segue.destination as! NewPlaceTableViewController
             newPlaceVC.currentPlace = place
-        } else {
-            
-        }
+        } 
     }
     
     // Configuring the transition to the main screen using the Save button
@@ -111,6 +109,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         newPlaceVc.savePlace()
         tableView.reloadData()
     }
+    
+    // MARK: - Sorting
     
     @IBAction func sortSelection(_ sender: UISegmentedControl) {
         sorting()
@@ -138,6 +138,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.reloadData()
     }
 }
+
+// MARK: - Search controller and filtering
 
 extension MainViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
