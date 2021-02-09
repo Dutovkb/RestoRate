@@ -6,14 +6,25 @@
 //
 
 import UIKit
+import Cosmos
 
 class TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var placeImage: UIImageView!
+    @IBOutlet weak var placeImage: UIImageView! {
+        didSet {
+            placeImage?.layer.cornerRadius = placeImage.frame.size.height / 2
+            placeImage?.clipsToBounds = true
+        }
+    }
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var cosmosView: CosmosView! {
+        didSet {
+            cosmosView.settings.updateOnTouch = false
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
