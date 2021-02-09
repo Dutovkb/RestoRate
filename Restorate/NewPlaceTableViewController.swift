@@ -87,6 +87,17 @@ class NewPlaceTableViewController: UITableViewController, UINavigationController
         }
     }
     
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != "showMap" {
+            return
+        }
+        
+        let mapVC = segue.destination as! MapViewController
+        mapVC.place = currentPlace
+    }
+    
     // Implement the possibility of saving a new establishment
     
     func savePlace() {
