@@ -292,7 +292,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xSM-ZR-Vp1" customClass="RatingControl" customModule="Restorate" customModuleProvider="target">
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xSM-ZR-Vp1" customClass="RatingControl" customModule="Restorate" customModuleProvider="target">
                                                     <rect key="frame" x="81" y="48" width="252" height="44"/>
                                                 </stackView>
                                             </subviews>
@@ -355,6 +355,11 @@
             <point key="canvasLocation" x="1739" y="35"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="xSM-ZR-Vp1">
+            <size key="intrinsicContentSize" width="252" height="44"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="Ntm-Wu-KnP"/>
     </inferredMetricsTieBreakers>
