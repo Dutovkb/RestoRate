@@ -102,7 +102,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="iFs-KO-Raw" id="zg0-nf-ywz"/>
+                                    <outlet property="dataSource" destination="iFs-KO-Raw" id="7wk-9u-k1d"/>
                                     <outlet property="delegate" destination="iFs-KO-Raw" id="gvv-gF-GjR"/>
                                 </connections>
                             </tableView>

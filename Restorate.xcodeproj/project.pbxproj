@@ -77,19 +77,51 @@
 			children = (
 				0B6C86C925CD5EC900B02136 /* AppDelegate.swift */,
 				0B6C86CB25CD5EC900B02136 /* SceneDelegate.swift */,
-				0B6C86DF25CD5F3F00B02136 /* MainViewController.swift */,
-				0B29F50325D13416007F4688 /* NewPlaceTableViewController.swift */,
-				0B29F50025CDBDFE007F4688 /* PlaceModel.swift */,
-				0BADFE5C25D17171006D3BE2 /* StorageManager.swift */,
-				0B29F4F625CDB8E2007F4688 /* TableViewCell.swift */,
-				0B86AC4825D2F88E0081A4C7 /* MapViewController.swift */,
-				0B86AC3C25D29E310081A4C7 /* RatingControl.swift */,
-				0B6C86CF25CD5EC900B02136 /* Main.storyboard */,
-				0B6C86D425CD5ECB00B02136 /* LaunchScreen.storyboard */,
+				0B86AC4B25D3E1E50081A4C7 /* Controllers */,
+				0B86AC4F25D3E2230081A4C7 /* Model */,
+				0B86AC4E25D3E2000081A4C7 /* StorageManager */,
+				0B86AC4D25D3E1F70081A4C7 /* VIew */,
 				0B29F4F325CDB16E007F4688 /* Assets.xcassets */,
 				0B6C86D725CD5ECB00B02136 /* Info.plist */,
 			);
 			path = Restorate;
+			sourceTree = "<group>";
+		};
+		0B86AC4B25D3E1E50081A4C7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B6C86DF25CD5F3F00B02136 /* MainViewController.swift */,
+				0B29F50325D13416007F4688 /* NewPlaceTableViewController.swift */,
+				0B86AC4825D2F88E0081A4C7 /* MapViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0B86AC4D25D3E1F70081A4C7 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				0B6C86CF25CD5EC900B02136 /* Main.storyboard */,
+				0B6C86D425CD5ECB00B02136 /* LaunchScreen.storyboard */,
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		0B86AC4E25D3E2000081A4C7 /* StorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				0BADFE5C25D17171006D3BE2 /* StorageManager.swift */,
+			);
+			name = StorageManager;
+			sourceTree = "<group>";
+		};
+		0B86AC4F25D3E2230081A4C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B29F50025CDBDFE007F4688 /* PlaceModel.swift */,
+				0B29F4F625CDB8E2007F4688 /* TableViewCell.swift */,
+				0B86AC3C25D29E310081A4C7 /* RatingControl.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2F1A851BE62F601ABBCD49B9 /* Frameworks */ = {
